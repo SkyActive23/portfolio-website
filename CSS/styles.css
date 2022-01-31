@@ -1,0 +1,430 @@
+/* Every Page */
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* variables */
+:root {
+    --content-background: lightgrey;
+    --button-color: #40423f;
+    --active-a-link: #77016d;
+    --font-color: #fff;
+    --body-background-color: rgb(255, 255, 255);
+    --heading-colors: #822530;
+    --heading-box-shadow: #dfdfdf;
+    --nav-color: #b18a14;
+    --nav-color-light: #edc655;
+    --nav-color-fill: #7a6010;
+    --black: rgb(0, 0, 0);
+    --sun-color1: #edc655;
+    --sun-color2: #fcffad;
+    --sun-color3: #f76414;
+    --cactus-color1: #17a151;
+    --cactus-color2: #85ed55;
+    --cactus-color3: #069263;
+    --border-radius-25: 25% 0 25% 0;
+    --font-weight-headings: 700;
+}
+
+
+body {
+    background-color: var(--body-background-color);
+    font-family:'Domine', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    /* Sets the font size to 16px */
+    line-height: 1.6;
+    /* Sets the line-height to 1.6 */
+}
+
+/* Heading Labels */
+h1 {
+    border-radius: 0 0 50% 50%;
+    font-size: 30px;
+    font-weight: var(--font-weight-headings);
+    background-color: var(--heading-colors);
+    color: var(--font-color);
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: var(--font-weight-headings);
+    background-color: var(--heading-colors);
+    color: var(--font-color);
+    text-align: center;
+    border-radius: var(--border-radius-25);
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: var(--font-weight-headings);
+    background-color: var(--heading-colors);
+    color: var(--font-color);
+}
+
+
+/* Links and Buttons */
+a {
+    color: var(--black);
+}
+
+div a.button {
+    color: var(--content-background);
+}
+  
+a:visited {
+    /* visited link */
+    color: var(--black);
+}
+
+a:hover, a:focus {
+    /* No underlining when hovering over a link */
+    text-decoration: none;
+}
+
+a:active {
+    /* selected link */
+    color: var(--active-a-link);
+}
+
+input, texture, select, button {
+    font-family: system-ui;
+}
+
+.a {
+    color: var(--black);
+}
+
+button:hover, button:focus, .button:hover, .button:focus, .send {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+}
+
+.button {
+    position: relative; 
+    display: inline block;
+    font-family: inherit; 
+    width: 200px;
+    height: 75px;
+    text-align: center;
+    line-height: 63px;
+    font-size: 20px;
+    background: var(--button-color);
+    border: 2px solid var(--black);
+    border-radius: 10%;
+    padding: 15px;
+    transition: .5s;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    background: #ffee10;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+  
+.button:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ffee10;
+}
+  
+.button:hover {
+    color: #ffee10;
+    box-shadow: 0 0 5px #ffee10;
+    text-shadow: 0 0 5px #ffee10;
+}
+
+/* Header and Nav */
+.page-header {
+    display: flex;
+    width: 100%;
+    padding: 5px 5px 0 5px;
+    border-bottom: 2px solid var(--black);
+    border-right: 2px solid var(--black);
+    box-shadow: 5px 10px var(--heading-box-shadow);
+}
+
+.page-header__item {
+    flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.navigation-list {
+    text-transform: uppercase;
+    font-weight: 600;
+    box-sizing: border-box;
+    transition: all .35s ease;
+}
+
+.navigation-list li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: .5em 1em;
+    padding: 0;
+}
+
+.navigation-list_item {
+    padding: .5em .8em;
+    color: var(--black);
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navigation-list_item::before, 
+.navigation-list_item::after {
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+}
+
+.navigation-list_item::before {
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 3px solid var(--nav-color-light);
+    border-right: 3px solid var(--nav-color);
+    transform: translate(-100%, 50%);
+}
+
+.navigation-list_item:after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid var(--nav-color);
+    border-left: 3px solid var(--nav-color-light);
+    transform: translate(100%, -50%)
+}
+
+.navigation-list_item:hover:before,
+.navigation-list_item:hover:after {
+    transform: translate(0,0);
+    opacity: 1;
+}
+
+.navigation-list_item:hover {
+    color: var(--nav-color-fill);
+}
+
+.navigation-list__item--active {
+    transition: all 0.5s;
+    position: relative;
+}
+  
+.navigation-list__item--active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+.navigation-list__item--active::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    transform: scale(1.2,1.2);
+}
+
+.navigation-list__item--active:hover::after {
+    opacity: 1;
+    transform: scale(1,1);
+}
+
+
+
+/* Home Page */
+.profile {
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.profile__portrait {
+    float: left;
+    height: auto;
+    width: 250px;
+    border-radius: 50%;
+}
+
+/* Footer */
+.page-footer {
+    clear: both;
+    background-color: var(--heading-colors);
+    color: var(--font-color);
+    border-radius: 50% 50% 0 0;
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 25px;
+}
+
+/* Contact Page */
+#contact-form {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.contact-box {
+    text-align: center;
+    padding-top: 25px;
+}
+
+/* About Page */
+.about {
+    text-align: center;
+}
+
+.about-list {
+    list-style-type: none;
+}
+
+table {
+    background-color: var(--heading-colors);
+    color: var(--black);
+}
+
+/* start grid fallback */
+.grid__item {
+    display: inline-block;
+    width: 33%;
+}
+/* end grid fallback */
+
+@supports (display: grid) {
+    .grid, .contact, .about {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+    }
+
+    .home {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+    }
+
+    .grid__item, .about-item {
+        background-color: var(--content-background);
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        border-radius: var(--border-radius-25);
+        padding: 10px;
+    }
+
+    .contact-box, .home-box {
+        background-color: var(--content-background);
+        width: auto;
+        min-height: auto;
+        border-radius: var(--border-radius-25);
+        margin: 0;
+    }
+
+    .home-box {
+        grid-area: 1 / 2 / span 1 / span 3;
+        width: 750px;
+        min-height: auto;
+        padding: 50px;
+    }
+
+    .about-item:last-child {
+        background-color: var(--content-background);
+        grid-column: 2 / -2;
+        grid-row: 3 / 2;
+
+    }    
+}
+
+/* Multiple Media Devices */
+@media all and (max-width: 500px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+}
+@media all and (max-width: 750px) {
+    .grid {
+      grid-gap: 10px;
+    }
+    .grid__item:last-child {
+      grid-column: auto / auto;
+      grid-row: auto / auto;
+    }
+    h1 {
+      font-size: 22px;
+    }
+}
+
+
+@keyframes sun-color-change {
+    0% {
+      fill: var(--sun-color1);
+    }
+    50% {
+      fill: var(--sun-color2);
+    }
+    100% {
+      fill: var(--sun-color3);
+    }
+}
+
+
+.sun {
+    animation: 4s sun-color-change infinite alternate linear;
+}
+
+
+@keyframes cactus-color-change {
+    0% {
+      fill: var(--cactus-color1);
+    }
+    50% {
+      fill: var(--cactus-color2);
+    }
+    100% {
+      fill: var(--cactus-color3);
+    }
+}
+
+.cactus  {
+    animation: 4s cactus-color-change infinite alternate linear;
+}
+
