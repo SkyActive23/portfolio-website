@@ -12,8 +12,7 @@
 /* variables */
 :root {
     --content-background: lightgrey;
-    --button-color: #40423f;
-    --active-a-link: #77016d;
+    --button-color: #40423f;--active-a-link: #77016d;
     --font-color: #fff;
     --body-background-color: rgb(255, 255, 255);
     --heading-colors: #AA0000;
@@ -78,7 +77,7 @@ a {
 div a.button {
     color: var(--content-background);
 }
-  
+
 a:visited {
     /* visited link */
     color: var(--black);
@@ -110,9 +109,8 @@ button:hover, button:focus, .button:hover, .button:focus, .send {
 }
 
 .button {
-    position: relative; 
-    display: inline block;
-    font-family: inherit; 
+    position: relative;
+    font-family: inherit;
     width: 200px;
     height: 75px;
     text-align: center;
@@ -138,12 +136,12 @@ button:hover, button:focus, .button:hover, .button:focus, .send {
     transform: scale(.9);
     z-index: -1;
 }
-  
+
 .button:hover::before {
     transform: scale(1.1);
     box-shadow: 0 0 15px #ffee10;
 }
-  
+
 .button:hover {
     color: #ffee10;
     box-shadow: 0 0 5px #ffee10;
@@ -191,7 +189,7 @@ button:hover, button:focus, .button:hover, .button:focus, .send {
     font-size: 20px;
 }
 
-.navigation-list_item::before, 
+.navigation-list_item::before,
 .navigation-list_item::after {
     content: '';
     height: 14px;
@@ -233,7 +231,7 @@ button:hover, button:focus, .button:hover, .button:focus, .send {
     transition: all 0.5s;
     position: relative;
 }
-  
+
 .navigation-list__item--active::before {
     content: '';
     position: absolute;
@@ -366,7 +364,7 @@ table {
         grid-column: 2 / -2;
         grid-row: 3 / 2;
 
-    }    
+    }
 }
 
 /* Multiple Media Devices */
@@ -427,4 +425,3 @@ table {
 .cactus  {
     animation: 4s cactus-color-change infinite alternate linear;
 }
-
