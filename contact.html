@@ -1,112 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="./img/favicon-32x32.png" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="CSS/style.production.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Domine&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="CSS/style.production.css" />
     <title>Contact Sky Web Today</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <main class="container">
-        <!-- Header -->
-        <header class="page-header">
+      <!-- Header -->
+      <header class="page-header">
+        <!-- logo -->
+        <img
+          src="./img/sky_web_logo2.png"
+          height="95"
+          width="80"
+          class="page-header__item"
+          alt="sky web logo, logo with all uppercase letters"
+        />
 
-            <!-- logo -->
-            <img src="./img/sky_web_logo2.png" height="95" width="80" class="page-header__item"
-                alt="sky web logo, logo with all uppercase letters">
+        <!-- Nav -->
+        <nav class="main-navigation page-header__item">
+          <ul role="menubar" class="navigation-list">
+            <li role="presentation">
+              <a href="index.html" role="menuitem" class="navigation-list_item"
+                >Home</a
+              >
+            </li>
+            <li role="presentation">
+              <a href="about.html" role="menuitem" class="navigation-list_item"
+                >About Me</a
+              >
+            </li>
+            <li role="presentation">
+              <a href="work.html" role="menuitem" class="navigation-list_item"
+                >Work</a
+              >
+            </li>
+            <li role="presentation">
+              <a
+                href="contact.html"
+                role="menuitem"
+                class="navigation-list_item navigation-list__item--active"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-            <!-- Nav -->
-            <nav class="main-navigation page-header__item">
-                <ul role="menubar" class="navigation-list">
-                    <li role="presentation"><a href="index.html" role="menuitem" class="navigation-list_item">Home</a>
-                    </li>
-                    <li role="presentation"><a href="about.html" role="menuitem" class="navigation-list_item">About
-                            Me</a>
-                    </li>
-                    <li role="presentation"><a href="work.html" role="menuitem" class="navigation-list_item">Work</a>
-                    </li>
-                    <li role="presentation"><a href="contact.html" role="menuitem"
-                            class="navigation-list_item navigation-list__item--active">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+      <div>
+        <h1 class="page-header__item">Contact Page</h1>
+        <div class="contact">
+          <div class="contact-box">
+            <form action="#" method="post" id="contact-form">
+              <label class="standard-label" for="contact-email">E-mail:</label>
+              <br />
+              <input type="email" id="contact-email" required />
+              <br />
 
-        <div>
-            <h1 class="page-header__item">Contact Page</h1>
-            <div class="contact">
-                <div class="contact-box">
-                    <form action="#" method="post" id="contact-form">
-                        <label class="standard-label" for="contact-email">E-mail:</label>
-                        <br>
-                        <input type="email" id="contact-email" required>
-                        <br>
+              <label class="standard-label" for="contact-tel">Telephone:</label>
+              <br />
+              <input
+                type="tel"
+                id="contact-tel"
+                pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+              />
+              <!-- restrictions not recommended for internation numbers -->
+              <br />
 
-                        <label class="standard-label" for="contact-tel">Telephone:</label>
-                        <br>
-                        <input type="tel" id="contact-tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
-                        <!-- restrictions not recommended for internation numbers -->
-                        <br>
+              <label class="standard-label" for="contact-message"
+                >Message:</label
+              >
+              <br />
+              <textarea
+                maxlength="240"
+                required
+                id="contact-message"
+              ></textarea>
 
-                        <label class="standard-label" for="contact-message">Message:</label>
-                        <br>
-                        <textarea maxlength="240" required id="contact-message"></textarea>
+              <br />
+              <input type="submit" value="send message" class="send" />
+              <br />
+            </form>
+          </div>
+          <div class="contact-box">
+            <br />
+            <a href="mailto:skyrj50031@gmail.com">Contact Me</a>
+            <br />
 
-                        <br>
-                        <input type="submit" value="send message" class="send">
-                        <br>
-                    </form>
-                </div>
-                <div class="contact-box">
-                    <br>
-                    <a href="mailto:skyrj50031@gmail.com">Contact Me</a>
-                    <br>
-
-                    <a href="./img/my_resume.pdf" class="button" target="blank" download>My Resume</a>
-                </div>
-                <div class="contact-box">
-                    <br>
-                    <p>
-                        CareerFoundry GmbH<br>
-                        Köpenicker Str. 126<br>
-                        10179 Berlin<br>
-                        Deutschland<br>
-                        <br>
-                        Telephone Number: <a href="tel:1233451234">(123)123-1234</a><br>
-                        skype: <a href="skype:https://web.skype.com/">Skype Me</a><br>
-                        Email: <a href="mailto:skyrj50031@gmail.com">email@email.email</a>
-                    </p>
-                </div>
-            </div>
+            <a href="./img/my_resume.pdf" class="button" target="blank" download
+              >My Resume</a
+            >
+          </div>
+          <div class="contact-box">
+            <br />
+            <p>
+              CareerFoundry GmbH<br />
+              Köpenicker Str. 126<br />
+              10179 Berlin<br />
+              Deutschland<br />
+              <br />
+              Telephone Number: <a href="tel:1233451234">(123)123-1234</a><br />
+              skype: <a href="skype:https://web.skype.com/">Skype Me</a><br />
+              Email: <a href="mailto:skyrj50031@gmail.com">email@email.email</a>
+            </p>
+          </div>
         </div>
+      </div>
 
-        <!-- Footer -->
-        <footer class="page-footer">
-            <p>Find Me On</p>
-            <div class="social-media">
-                <!-- Github logo -->
-                <a href="https://Github.com/skyactive23" target="blank"><img src="./img/footer_logos/Git-hub_logo.svg"
-                        alt="github"></a>
-                <!-- Twitter logo -->
-                <a href="https://Twitter.com/skyactive_23" target="blank"><img src="./img/footer_logos/Twitter_logo.svg"
-                        alt="twitter"></a>
-                <!-- LinkedIn logo -->
-                <a href="https://www.linkedin.com/" target="blank"><img src="./img/footer_logos/linkedin_logo.svg"
-                        alt="linkedin"></a>
-            </div>
-        </footer>
+      <!-- Footer -->
+      <footer class="page-footer">
+        <p>Find Me On</p>
+        <div class="social-media">
+          <!-- Github logo -->
+          <a href="https://Github.com/skyactive23" target="blank"
+            ><img src="./img/footer_logos/Git-hub_logo.svg" alt="github"
+          /></a>
+          <!-- Twitter logo -->
+          <a href="https://Twitter.com/skyactive_23" target="blank"
+            ><img src="./img/footer_logos/Twitter_logo.svg" alt="twitter"
+          /></a>
+          <!-- LinkedIn logo -->
+          <a href="https://www.linkedin.com/" target="blank"
+            ><img src="./img/footer_logos/linkedin_logo.svg" alt="linkedin"
+          /></a>
+        </div>
+      </footer>
     </main>
     <script src="js/stylelint.config.js"></script>
     <script src="js/tota11y.min.js"></script>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
